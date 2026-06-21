@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: NumberConsumerService
+
+grpc:
+  client:
+    myGrpcService:
+      address: localhost:9091
+      negotiation-type: plaintext

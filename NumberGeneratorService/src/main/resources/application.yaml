@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: NumberGeneratorService
+
+grpc:
+  server:
+    port: 9091
