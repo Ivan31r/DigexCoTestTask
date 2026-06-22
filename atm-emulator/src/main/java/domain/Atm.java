@@ -26,11 +26,8 @@ public class Atm {
     }
 
     public Map<Denomination, Integer> withdraw(int amount) {
-
         Map<Denomination, Integer> result = new EnumMap<>(Denomination.class);
-
         int remaining = amount;
-
         List<Denomination> denominations =
                 Arrays.stream(Denomination.values())
                         .sorted(Comparator.comparingInt(Denomination::getValue)
@@ -38,7 +35,6 @@ public class Atm {
                         .toList();
 
         for (Denomination denomination : denominations) {
-
             CashCell cell = cells.get(denomination);
             int needed = remaining / denomination.getValue();
             int available = cell.getCount();

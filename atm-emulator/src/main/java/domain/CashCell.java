@@ -16,10 +16,6 @@ public class CashCell {
         return count;
     }
 
-    public Denomination getDenomination() {
-        return denomination;
-    }
-
     public int getBalance() {
         return denomination.getValue() * count;
     }
